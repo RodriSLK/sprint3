@@ -17,15 +17,15 @@ import java.math.BigDecimal;
 public class DetallePedido extends BaseEntidad{
 
     @NotNull
-    private Integer cantidad;
+    private int cantidad;
 
     @NotNull
-    @Column(name = "subtotal", precision = 10, scale = 2)
-    private BigDecimal subtotal;
+    @Column(name = "subtotal")
+    private double subtotal;
 
     @NotNull
-    @Column(name = "subtotal_costo", precision = 10, scale = 2)
-    private BigDecimal subtotalCosto;
+    @Column(name = "subtotal_costo")
+    private double subtotalCosto;
 
     @ManyToOne()
     @JoinColumn(name = "id_articulo_insumo")

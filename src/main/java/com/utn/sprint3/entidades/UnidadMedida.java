@@ -17,7 +17,7 @@ import java.util.Date;
 public class UnidadMedida extends BaseEntidad{
 
     @NotNull
-    @Column(length = 255)
+    @Column(length = 25)
     private String denominacion;
 
     @NotNull

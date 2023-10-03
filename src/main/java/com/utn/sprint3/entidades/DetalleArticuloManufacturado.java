@@ -17,8 +17,8 @@ import java.math.BigDecimal;
 public class DetalleArticuloManufacturado extends BaseEntidad{
 
     @NotNull
-    @Column(name = "cantidad", precision = 10, scale = 2)
-    private BigDecimal cantidad;
+    @Column(name = "cantidad")
+    private int cantidad;
 
     @NotNull
     @ManyToOne()

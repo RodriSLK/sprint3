@@ -1,5 +1,6 @@
 package com.utn.sprint3.entidades;
 
+import com.utn.sprint3.enums.Rol;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -23,6 +24,8 @@ public class Usuario extends BaseEntidad{
     @NotNull
     @Column(name = "username", nullable = false)
     private String username;
+
+   private Rol rol;
 
     @NotNull
     @Column(name = "fecha_alta")

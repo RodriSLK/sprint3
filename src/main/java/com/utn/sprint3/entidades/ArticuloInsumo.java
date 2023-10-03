@@ -24,16 +24,16 @@ public class ArticuloInsumo extends BaseEntidad {
     private String urlImagen;
 
     @NotNull
-    @Column(name = "precio_compra", precision = 10, scale = 2)
-    private BigDecimal precioCompra;
+    @Column(name = "precio_compra")
+    private double precioCompra;
 
     @NotNull
-    @Column(name = "stock_actual", precision = 10, scale = 2)
-    private BigDecimal stockActual;
+    @Column(name = "stock_actual")
+    private double stockActual;
 
     @NotNull
-    @Column(name = "stock_minimo", precision = 10, scale = 2)
-    private BigDecimal stockMinimo;
+    @Column(name = "stock_minimo")
+    private int stockMinimo;
 
     @NotNull
     @ManyToOne()

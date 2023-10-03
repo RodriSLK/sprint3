@@ -22,20 +22,20 @@ public class Domicilio extends BaseEntidad{
 
     @NotNull
     @Column(precision = 5)
-    private Integer numero;
+    private int numero;
 
     @NotNull
     @Column(precision = 4)
-    private Integer codigoPostal;
+    private int codigoPostal;
 
     @NotNull
     private String localidad;
 
     @Column(name = "numero_vivienda")
-    private Integer numeroDpto;
+    private int numeroDpto;
 
     @Column(name = "piso_vivienda")
-    private Integer pisoDpto;
+    private int pisoDpto;
 
    /* @NotNull
     @ManyToOne()

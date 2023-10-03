@@ -21,7 +21,7 @@ public class MercadoPagoDatos extends BaseEntidad{
 
     private String formaPago;
 
-    private Long identificadorPago;
+    private int identificadorPago;
 
     private String metodoPago;
 

@@ -29,14 +29,14 @@ public class ArticuloManufacturado extends BaseEntidad{
 
     @NotNull
     @Column(name = "tiempo_estimado_cocina")
-    private Integer tiempoEstimadoCocina;
+    private int tiempoEstimadoCocina;
 
     @NotNull
-    @Column(name = "precio_venta", precision = 10, scale = 2)
-    private BigDecimal precioVenta;
+    @Column(name = "precio_venta")
+    private double precioVenta;
 
-    @Column(name = "costo", precision = 10, scale = 2)
-    private BigDecimal costo;
+    @Column(name = "costo")
+    private double costo;
 
     @Column(length = 500, name = "url_imagen")
     private String urlImagen;
@@ -63,6 +63,11 @@ public class ArticuloManufacturado extends BaseEntidad{
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
+
+    public void agregarDetalleArticuloManufacturado(DetalleArticuloManufacturado detalleArticuloManufacturado){
+
+        detalleArticuloManufacturados.add(detalleArticuloManufacturado);
+    }
 
 
 }

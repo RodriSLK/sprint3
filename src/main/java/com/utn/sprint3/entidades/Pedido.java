@@ -33,12 +33,12 @@ public class Pedido extends BaseEntidad{
     private Date horaEstimadaFinalizacion;
 
     @NotNull
-    @Column(name = "total", precision = 10, scale = 2)
-    private BigDecimal total;
+    @Column(name = "total")
+    private double total;
 
     @NotNull
-    @Column(name = "total_costo", precision = 10, scale = 2)
-    private BigDecimal totalCosto;
+    @Column(name = "total_costo")
+    private double totalCosto;
 
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -89,4 +89,9 @@ public class Pedido extends BaseEntidad{
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+
+    public void agregarDetallePedido(DetallePedido detallePedido){
+
+        detallePedidos.add(detallePedido);
+    }
 }

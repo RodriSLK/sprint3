@@ -26,10 +26,10 @@ public class Factura extends BaseEntidad{
     private Date fechaFacturacion;
 
     @Column(name = "mp_payment_id")
-    private Long mpPaymentId;
+    private int mpPaymentId;
 
     @Column(name = "mp_merchant_order_id")
-    private Long mpMerchantOrderId;
+    private int mpMerchantOrderId;
 
     @Column(name = "mp_preference_id")
     private String mpPreferenceId;
@@ -41,8 +41,8 @@ public class Factura extends BaseEntidad{
     private FormaPago formaPago;
 
     @NotNull
-    @Column(name = "total_venta", precision = 10, scale = 2)
-    private BigDecimal totalVenta;
+    @Column(name = "total_venta")
+    private double totalVenta;
 
     @NotNull
     @Column(name = "fecha_alta")
@@ -66,5 +66,10 @@ public class Factura extends BaseEntidad{
     @JoinColumn(name = "id_factura")
     @Builder.Default
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
+
+    public void agregarDetalleFactura(DetalleFactura detalleFactura){
+
+        detalleFacturas.add(detalleFactura);
+    }
 
 }
